@@ -22,7 +22,7 @@ datagen=ImageDataGenerator(
         horizontal_flip=True,
         fill_mode='nearest')
 
-img=load_img(r"D:\gequ\111222.jpg")
+img=load_img(r"D:\photo\111222.jpg")
 x=img_to_array(img)
 print(x.shape)
 x=np.expand_dims(x,0)
@@ -33,7 +33,7 @@ print(x.shape)
 
 
 i=0
-for bach in datagen.flow(x,batch_size=1,save_to_dir='D:\gequ\ggtemp',save_prefix='next_dog',save_format='jpeg'):
+for bach in datagen.flow(x,batch_size=1,save_to_dir='D:\photo\ggtemp',save_prefix='next_dog',save_format='jpeg'):
     i+=1
     if i==20:
         break
